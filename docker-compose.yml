@@ -61,16 +61,16 @@ services:
     networks:
       - laravel
 
-  phpmyadmin:
-    image: phpmyadmin
-    restart: always
-    ports:
-      - 8081:80
-    environment:
-      - PMA_ARBITRARY=1
-      - UPLOAD_LIMIT=64M
-    networks:
-      - laravel
+  # phpmyadmin:
+  #   image: phpmyadmin
+  #   restart: always
+  #   ports:
+  #     - 8081:80
+  #   environment:
+  #     - PMA_ARBITRARY=1
+  #     - UPLOAD_LIMIT=64M
+  #   networks:
+  #     - laravel
 
   composer:
     build:
@@ -88,7 +88,7 @@ services:
       - laravel
 
   npm:
-    image: node:22-alpine
+    image: node:20-alpine
     volumes:
       - ./src:/var/www/html
     ports:

@@ -25,9 +25,9 @@ Route::middleware('auth')->group(function () {
             ->name('staff.')
             ->group(function () {
                 Route::get('/', 'index')->name('index');
-                Route::get('/{id}/details', 'view')->name('view');
-                Route::get('/{id}/edit', 'edit')->name('edit');
-                Route::patch('/{id}/update', 'update')->name('update');
+                Route::get('/{staff_id}/details', 'view')->name('view');
+                Route::get('/{staff_id}/edit', 'edit')->name('edit');
+                Route::patch('/{staff_id}/update', 'update')->name('update');
             });
 
         Route::controller(\App\Http\Controllers\RolePermission\RolePermissionController::class)
@@ -35,6 +35,7 @@ Route::middleware('auth')->group(function () {
             ->name('role.')
             ->group(function () {
                 Route::get('/', 'index')->name('index');
+                Route::get('/{role_id}/details', 'view')->name('view');
             });
     });
 

@@ -184,7 +184,7 @@ const RoleIndex = ({ roles }) => {
                                     <TableCell>
                                         <Link
                                             href={route(
-                                                "pos.staff.view",
+                                                "pos.role.view",
                                                 role.id
                                             )}
                                             className="hover:underline hover:font-medium"
@@ -197,7 +197,7 @@ const RoleIndex = ({ roles }) => {
                                     <TableCell>
                                         <Link
                                             href={route(
-                                                "pos.staff.view",
+                                                "pos.role.view",
                                                 role.id
                                             )}
                                         >
